@@ -1,0 +1,219 @@
+
+====== Prehled hodnoceni ==========
+4:programovy kod
+-2.1:Musím ubrat z prémie, protože maximum za semestr jsou 4 body.
+0.5:ok: arow
+0.5:ok: irow 1
+0.5:ok: drow 1
+0.5:ok: drows 2 3
+0.5:ok: icol 1
+0.5:ok: acol
+0.5:ok: dcol 1
+0.5:ok: dcols 2 3
+0.5:ok: cset 1 X
+0.5:ok: tolower 2
+0.5:ok: toupper 3
+0.5:ok: copy 1 3
+0.5:ok: swap 1 3
+0.5:ok: move 3 1
+0:spatne: move 1 3
+0.5:ok: move 2 2
+0.4:ok: int 1
+0.4:ok: round 2
+0.4:ok: int 2
+0.4:ok: round 3
+0.5:ok: rows 1 2 cset 2 ABCD
+0.5:ok: beginswith 2 B cset 1 ABCD
+0.5:ok: beginswith 2 B3 cset 1 ABCD
+0.5:ok: contains 3 3 cset 1 ABCD
+0.2:ok: -d :, icol 2
+0.2:ok: -d :, acol
+0.2:ok: -d :, dcol 1
+0:spatne: csum 3 1 2
+0:spatne: cavg 3 1 2
+0:spatne: cmin 3 1 2
+0:spatne: cmax 3 1 2
+0:spatne: ccount 3 1 2
+0:spatne: cseq 1 3 1
+0:spatne: rseq 1 1 3 2
+0:spatne: rsum 2 1 2
+0:spatne: ravg 1 1 2
+0:spatne: rmin 1 1 2
+0:spatne: rmax 1 1 2
+0:spatne: rcount 1 1 2
+0.2:ok: reakce na neocekavane argumenty
+0:chyba: reakce na malo argumentu
+0.2:ok: reakce na spatne argumenty
+
+====== Log z prekladu =============
+Ok
+
+====== Analyza kodu ===============
+Ok
+
+====== Log z jednotlivych testu ===
+0.5:ok: arow
+0.5:ok: irow 1
+0.5:ok: drow 1
+0.5:ok: drows 2 3
+0.5:ok: icol 1
+0.5:ok: acol
+0.5:ok: dcol 1
+0.5:ok: dcols 2 3
+0.5:ok: cset 1 X
+0.5:ok: tolower 2
+0.5:ok: toupper 3
+0.5:ok: copy 1 3
+0.5:ok: swap 1 3
+0.5:ok: move 3 1
+0:spatne: move 1 3
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zdt7    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zdt7    2020-12-17 13:00:56.896393000 +0100
+#   @@ -1,3 +1,3 @@
+#   -B1 A1 C1
+#   -b2 a2 C2
+#   -B3 A3 c3
+#   +B1 C1 A1
+#   +b2 C2 a2
+#   +B3 c3 A3
+#   \ No newline at end of file
+0.5:ok: move 2 2
+0.4:ok: int 1
+0.4:ok: round 2
+0.4:ok: int 2
+0.4:ok: round 3
+0.5:ok: rows 1 2 cset 2 ABCD
+0.5:ok: beginswith 2 B cset 1 ABCD
+0.5:ok: beginswith 2 B3 cset 1 ABCD
+0.5:ok: contains 3 3 cset 1 ABCD
+0.2:ok: -d :, icol 2
+0.2:ok: -d :, acol
+0.2:ok: -d :, dcol 1
+# Na stderr program vypsal:
+# Unknow function 'csum'
+0:spatne: csum 3 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zdec1    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zdec1    2020-12-17 13:00:57.036136000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 1.5
+#   -2 -0.7 1.3
+#   -3 -1.5 1.5
+# Na stderr program vypsal:
+# Unknow function 'cavg'
+0:spatne: cavg 3 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zdec2    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zdec2    2020-12-17 13:00:57.049637000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 0.75
+#   -2 -0.7 0.65
+#   -3 -1.5 0.75
+# Na stderr program vypsal:
+# Unknow function 'cmin'
+0:spatne: cmin 3 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zdec3    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zdec3    2020-12-17 13:00:57.063355000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 0.5
+#   -2 -0.7 -0.7
+#   -3 -1.5 -1.5
+# Na stderr program vypsal:
+# Unknow function 'cmax'
+0:spatne: cmax 3 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zdec4    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zdec4    2020-12-17 13:00:57.077594000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 1
+#   -2 -0.7 2
+#   -3 -1.5 3
+# Na stderr program vypsal:
+# Unknow function 'ccount'
+0:spatne: ccount 3 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zdec5    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zdec5    2020-12-17 13:00:57.091552000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 2
+#   -2 -0.7 2
+#   -3 -1.5 2
+# Na stderr program vypsal:
+# Unknow function 'cseq'
+0:spatne: cseq 1 3 1
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zdec6    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zdec6    2020-12-17 13:00:57.105629000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 2 3
+#   -1 2 3
+#   -1 2 3
+# Na stderr program vypsal:
+# Unknow function 'rseq'
+0:spatne: rseq 1 1 3 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zder1    2020-12-17 07:55:48.328203000 +0100
+#   +++ test_zder1    2020-12-17 13:00:57.119457000 +0100
+#   @@ -1,3 +0,0 @@
+#   -2 0.5 0.5
+#   -3 -0.7 10.0
+#   -4 -1.5 7.5
+# Na stderr program vypsal:
+# Unknow function 'rsum'
+0:spatne: rsum 2 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zder2    2020-12-17 07:55:48.329198000 +0100
+#   +++ test_zder2    2020-12-17 13:00:57.133147000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 0.5
+#   -2 -0.7 10.0
+#   -3 -0.2 7.5
+# Na stderr program vypsal:
+# Unknow function 'ravg'
+0:spatne: ravg 1 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zder3    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zder3    2020-12-17 13:00:57.146935000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 0.5
+#   -2 -0.7 10.0
+#   -1.5 -1.5 7.5
+# Na stderr program vypsal:
+# Unknow function 'rmin'
+0:spatne: rmin 1 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zder4    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zder4    2020-12-17 13:00:57.162479000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 0.5
+#   -2 -0.7 10.0
+#   -1 -1.5 7.5
+# Na stderr program vypsal:
+# Unknow function 'rmax'
+0:spatne: rmax 1 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zder5    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zder5    2020-12-17 13:00:57.177651000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 0.5
+#   -2 -0.7 10.0
+#   -2 -1.5 7.5
+# Na stderr program vypsal:
+# Unknow function 'rcount'
+0:spatne: rcount 1 1 2
+# Neodpovida vzorovemu vystupu
+#   --- testdata/test_zder6    2020-11-23 09:44:03.000000000 +0100
+#   +++ test_zder6    2020-12-17 13:00:57.192564000 +0100
+#   @@ -1,3 +0,0 @@
+#   -1 0.5 0.5
+#   -2 -0.7 10.0
+#   -2 -1.5 7.5
+0.2:ok: reakce na neocekavane argumenty
+#   Unknow function 'neplatny_prikaz'
+0:chyba: reakce na malo argumentu
+0.2:ok: reakce na spatne argumenty
+#   Expected integer in function 'icol'
+#   'XX' is not valid integer
+#   Required integers: 1
